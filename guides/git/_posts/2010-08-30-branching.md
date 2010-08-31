@@ -1,5 +1,5 @@
 ---
-layout: master
+layout: guide
 title: Git Branching
 ---
 

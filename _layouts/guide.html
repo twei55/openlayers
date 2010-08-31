@@ -1,0 +1,27 @@
+---
+layout: master
+---
+<div class="guide">
+    <h1 class="title">{{ page.title }}</h1>
+    <span class="date">{{ page.date | date_to_string }}</span>
+    <span class="categories">
+        Topic:
+        {% for category in page.categories %}
+            {% if category != "guides" %}
+                <a class="category" title="other {{ category }} posts" href="{{ site.url }}guides/{{ category }}">{{ category }}</a>
+            {% endif %}
+        {% endfor %}
+    </span>
+    <div class="body">{{ content }}</div>
+</div>
+
+<h1 class="section-header"><span>Related Guides (<a href="{{ site.url }}guides/">see all</a>)</span></h1>
+<table class="section">
+    {% for post in site.related_posts limit:3 %}
+    <tr class="post">
+        <th class="title"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></th>
+        <td class="date">{{ post.date | date_to_string }}</td>
+    </tr>
+    {% endfor %}
+</table>
+

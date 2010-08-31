@@ -1,1 +1,3 @@
+#url: "http://localhost/projects/ol3/_site/"
 url: http://openlayers.github.com/openlayers/
+permalink: ":categories/:title.html"

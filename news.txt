@@ -1,4 +1,4 @@
-OpenLayers 2.9:
+OpenLayers 2.9: 
  r10251
  Released 04/22/10
  http://trac.openlayers.org/wiki/Release/2.9/Notes

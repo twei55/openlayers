@@ -196,13 +196,13 @@ div.olControlMousePosition {
   background-position: -103px -23px; 
 }
 .olControlEditingToolbar .olControlNavigationItemInactive { 
-  background-position: -103px -0px; 
+  background-position: -103px 0; 
 }
 .olControlEditingToolbar .olControlDrawFeaturePointItemActive { 
   background-position: -77px -23px; 
 }
 .olControlEditingToolbar .olControlDrawFeaturePointItemInactive { 
-  background-position: -77px -0px; 
+  background-position: -77px 0; 
 }
 .olControlEditingToolbar .olControlDrawFeaturePathItemInactive { 
   background-position: -51px 0; 

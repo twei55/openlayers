@@ -344,35 +344,6 @@
         t.eq(node.path, "m 2,4 l 6,8 x m 10,12 l 14,16 x e", "path attribute is correct");
     }
     
-    function test_VML_drawrectangle(t) {
-        if (!OpenLayers.Renderer.VML.prototype.supported()) {
-            t.plan(0);
-            return;
-        }
-        
-        t.plan(4);
-        
-        var r = new OpenLayers.Renderer.VML(document.body);
-        r.offset = {x: 0, y: 0};
-        r.resolution = 0.5;
-        
-        var node = document.createElement('div');
-        
-        var geometry = {
-            x: 1,
-            y: 2,
-            width: 3,
-            height: 4
-        }
-        
-        r.drawRectangle(node, geometry);
-        
-        t.eq(node.style.left, "2px", "node.style.left is correct");
-        t.eq(node.style.top, "4px", "node.style.top is correct");
-        t.eq(node.style.width, "6px", "node.style.width is correct");
-        t.eq(node.style.height, "8px", "node.style.height is correct");
-    }
-    
     function test_vml_getnodetype(t) {
         if (!OpenLayers.Renderer.VML.prototype.supported()) {
             t.plan(0);

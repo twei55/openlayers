@@ -231,7 +231,6 @@ Group: OpenLayers  {
       File: MultiPolygon  (no auto-title, OpenLayers/Geometry/MultiPolygon.js)
       File: Point  (no auto-title, OpenLayers/Geometry/Point.js)
       File: Polygon  (no auto-title, OpenLayers/Geometry/Polygon.js)
-      File: Rectangle  (no auto-title, OpenLayers/Geometry/Rectangle.js)
       }  # Group: Geometry
 
    Group: Handler  {

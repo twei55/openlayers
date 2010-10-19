@@ -267,6 +267,36 @@
         t.eq(r.drawPolygon(node, geometry), false, "drawPolygon returns false if one linearRing cannot be drawn");
     }
 
+    function test_SVG_drawrectangle(t) {
+        if (!OpenLayers.Renderer.SVG.prototype.supported()) {
+            t.plan(0);
+            return;
+        }
+        
+        t.plan(4);
+        
+        var r = new OpenLayers.Renderer.SVG(document.body);
+        r.resolution = 0.5;
+        r.left = 0;
+        r.top = 0;
+        
+        var node = document.createElement('div');
+        
+        var geometry = {
+            x: 1,
+            y: 2,
+            width: 3,
+            height: 4
+        }
+        
+        r.drawRectangle(node, geometry);
+        
+        t.eq(node.getAttributeNS(null, "x"), "2", "x attribute is correctly set");
+        t.eq(node.getAttributeNS(null, "y"), "-4", "y attribute is correctly set");
+        t.eq(node.getAttributeNS(null, "width"), "6", "width attribute is correctly set");
+        t.eq(node.getAttributeNS(null, "height"), "8", "height attribute is correctly set");
+    }
+    
     function test_SVG_drawsurface(t) {
         if (!OpenLayers.Renderer.SVG.prototype.supported()) {
             t.plan(0);

@@ -118,6 +118,18 @@ to fetch changes and apply them as commits to your 2.x branch.
     git svn fetch
     git merge git-svn
 
+Note: If you get something like
+
+    Couldn't find revmap for
+    http://svn.openlayers.org/trunk/openlayers/sandbox/roberthl/openlayers
+    Last fetched revision of refs/remotes/git-svn was r11034, but we are about
+    to fetch: r11034!
+
+on "git svn fetch", you need to friendly remind git svn what the HEAD revision
+is, and use the following instead:
+
+    git svn fetch -r HEAD
+
 The merge won't do anything if there weren't any new changes from svn (so there 
 is no need to run it if you don't see changes come in from the fetch).  If there
 were commits to merge, you'll see that your 2.x branch is ahead of origin/2.x by

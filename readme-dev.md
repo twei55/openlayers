@@ -125,10 +125,8 @@ Note: If you get something like
     Last fetched revision of refs/remotes/git-svn was r11034, but we are about
     to fetch: r11034!
 
-on "git svn fetch", you need to friendly remind git svn what the HEAD revision
-is, and use the following instead:
-
-    git svn fetch -r HEAD
+on `git svn fetch`, you need to friendly remind git svn what the HEAD revision
+is, and use `git svn fetch -r HEAD` instead.
 
 The merge won't do anything if there weren't any new changes from svn (so there 
 is no need to run it if you don't see changes come in from the fetch).  If there

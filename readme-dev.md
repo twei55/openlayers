@@ -113,10 +113,11 @@ the latest changes:
 We expect all the changes in this branch to come from subversion - so you should
 never make commits (with `git commit`) directly to this branch.  Instead, we
 always fetch changes from the remote subversion repository.  Run the following 
-to fetch changes and apply them as commits to your 2.x branch.
+to fetch changes and apply them as commits to your 2.x branch. Use --no-ff to
+prevent the file authors.txt from being removed automatically.
 
     git svn fetch
-    git merge git-svn
+    git merge --no-ff git-svn
 
 Note: If you get something like
 
